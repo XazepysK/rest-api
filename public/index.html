@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>statix api's</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: lowercase;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .chud {
+            background: #2b2b2b;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .soyjak {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        .polyester {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 0;
+        }
+
+        .polyester span {
+            color: #7fa8c9;
+        }
+
+        .gyat {
+            display: flex;
+            list-style: none;
+        }
+
+        .gyat a {
+            color: #999;
+            text-decoration: none;
+            padding: 14px 14px;
+            display: block;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .gyat a:hover {
+            color: #fff;
+            background: #3a3a3a;
+        }
+
+        .rizz {
+            background: #2b2b2b;
+            padding: 80px 20px 40px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .rizz img {
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 8px;
+            border: 2px solid #444;
+            width: 40%;
+            max-width: 300px;
+        }
+
+        .rizz h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .sigma {
+            display: inline-block;
+            background: #4a7c59;
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-bottom: 15px;
+        }
+
+        .sigma::before {
+            content: "• ";
+        }
+
+        .rizz p {
+            font-size: 13px;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #bbb;
+        }
+
+        .yappatron {
+            margin-top: 15px;
+            font-size: 11px;
+            color: #777;
+        }
+
+        .ohio {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        .mewing {
+            text-align: center;
+            font-size: 22px;
+            color: #2b2b2b;
+            margin: 40px 0 10px;
+        }
+
+        .mewing::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #7fa8c9;
+            margin: 8px auto 0;
+        }
+
+        .goon {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .goon input {
+            width: 100%;
+            padding: 11px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+            background: #fff;
+        }
+
+        .goon input:focus {
+            border-color: #7fa8c9;
+        }
+
+        .blud {
+            margin-bottom: 25px;
+        }
+
+        .yapping {
+            background: #3a3a3a;
+            color: #eee;
+            padding: 9px 18px;
+            border-radius: 4px 4px 0 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .cooked {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            overflow: hidden;
+        }
+
+        .skibidi {
+            padding: 11px 18px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.15s;
+            cursor: pointer;
+        }
+
+        .skibidi:last-child {
+            border-bottom: none;
+        }
+
+        .skibidi:hover {
+            background: #f0f0f0;
+        }
+
+        .huzz {
+            flex: 1;
+        }
+
+        .unc {
+            font-weight: bold;
+            font-size: 13px;
+            color: #2b2b2b;
+        }
+
+        .capybara {
+            font-size: 11px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .grimace {
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            background: #ececec;
+            padding: 3px 8px;
+            border-radius: 3px;
+            color: #666;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .fanum {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .griddy {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .muntz {
+            display: inline-block;
+            padding: 9px 22px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+
+        .muntz:hover {
+            background: #3a3a3a;
+            color: #fff;
+            border-color: #3a3a3a;
+        }
+
+        .detalmick {
+            background: #2b2b2b;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 11px;
+        }
+
+        .detalmick a {
+            color: #7fa8c9;
+            text-decoration: none;
+        }
+
+        .sigeonpex {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sigeonpex.active {
+            display: flex;
+        }
+
+        .jerma {
+            background: #fff;
+            border-radius: 6px;
+            width: 90%;
+            max-width: 580px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        .trollface {
+            background: #3a3a3a;
+            color: #eee;
+            padding: 14px 20px;
+            border-radius: 6px 6px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .trollface h3 {
+            font-size: 15px;
+        }
+
+        .yeet {
+            background: transparent;
+            border: none;
+            color: #999;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .yeet:hover {
+            background: #4a4a4a;
+            color: #fff;
+        }
+
+        .susbox {
+            padding: 20px;
+        }
+
+        .copebox {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            word-break: break-all;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .npcbox {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-bottom: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .npcbox:focus {
+            border-color: #7fa8c9;
+        }
+
+        .copege {
+            background: #2b2b2b;
+            color: #7fb98a;
+            padding: 14px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            display: none;
+            margin-top: 15px;
+        }
+
+        .poggers {
+            background: #3d6b8e;
+            color: #fff;
+            border: none;
+            padding: 9px 22px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background 0.2s;
+        }
+
+        .poggers:hover {
+            background: #2f5570;
+        }
+
+        .copium {
+            background: #4a7c59;
+            color: #fff;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .copium:hover {
+            background: #3d6749;
+        }
+
+        .lore {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .gyat {
+                display: none;
+            }
+
+            .rizz img {
+                width: 80% !important;
+            }
+
+            .skibidi {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .grimace {
+                margin-left: 0;
+            }
+
+            .rizz h1 {
+                font-size: 24px;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #eee;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bbb;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="chud">
+        <div class="soyjak">
+            <a href="#" class="polyester">statix<span>api</span></a>
+            <ul class="gyat" id="navrizz"></ul>
+        </div>
+    </nav>
+
+    <div class="rizz">
+        <img id="kattis" src="" alt="header">
+        <div class="sigma" id="shimmer">online</div>
+        <h1 id="gibname">statix api's</h1>
+        <p id="gibdesc"></p>
+        <div class="yappatron" id="gibcreator"></div>
+    </div>
+
+    <div class="ohio">
+        <div class="goon">
+            <input type="text" id="searchgoon" placeholder="search endpoint...">
+        </div>
+
+        <h2 class="mewing">api endpoints</h2>
+        <div id="listgoon"></div>
+
+        <div class="fanum">
+            <h2 class="mewing">links</h2>
+            <div class="griddy" id="gridgoon"></div>
+        </div>
+    </div>
+
+    <footer class="detalmick">
+        <p>&copy; 2015 statix api's - all rights reserved</p>
+        <p>created by <a href="#" id="footercreator"></a></p>
+    </footer>
+
+    <div class="sigeonpex" id="overlaygoon">
+        <div class="jerma">
+            <div class="trollface">
+                <h3 id="titlegoon">endpoint</h3>
+                <button class="yeet" onclick="unmog()">&times;</button>
+            </div>
+            <div class="susbox">
+                <p class="lore">endpoint url:</p>
+                <div class="copebox" id="urlgoon"></div>
+                <button class="copium" onclick="capy()">copy url</button>
+
+                <div id="paramgoon" style="margin-top:15px;">
+                    <p class="lore">parameter:</p>
+                    <input type="text" class="npcbox" id="inputgoon" placeholder="enter value...">
+                    <button class="poggers" onclick="yaptest()">test api</button>
+                </div>
+
+                <div class="copege" id="resultgoon"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let soy = {};
+        fetch('../config.json').then(chudres => chudres.json()).then(chuddata => {
+          soy = chuddata;
+          goon();
+        }).catch(chuderr => {
+          document.body.innerHTML = '<p style="padding:100px 20px;text-align:center;">failed to load config.json</p>';
+        });
+
+        function goon() {
+            mew();
+            gyat();
+            rizz();
+            ohio();
+            sigma();
+            fanum();
+        }
+
+        function mew() {
+            document.getElementById('gibname').textContent = soy.name;
+            document.getElementById('gibdesc').textContent = soy.description;
+            document.getElementById('shimmer').textContent = soy.header.status;
+            document.getElementById('gibcreator').textContent = 'created by ' + soy.apisettings.creator;
+            document.getElementById('footercreator').textContent = soy.apisettings.creator;
+
+            const huzzarray = soy.header.imagesrc;
+            const huzzpick = huzzarray[Math.floor(Math.random() * huzzarray.length)];
+            document.getElementById('kattis').src = huzzpick;
+        }
+
+        function fanum() {
+            const unclord = document.getElementById('kattis');
+            const uncsizes = soy.header.imagesize;
+
+            function uncapply() {
+                if (window.innerWidth <= 768) {
+                    unclord.style.width = uncsizes.mobile;
+                } else if (window.innerWidth <= 1024) {
+                    unclord.style.width = uncsizes.tablet;
+                } else {
+                    unclord.style.width = uncsizes.desktop;
+                }
+            }
+
+            uncapply();
+            window.addEventListener('resize', uncapply);
+        }
+
+        function gyat() {
+            const navrizz = document.getElementById('navrizz');
+            navrizz.innerHTML = '';
+
+            soy.categories.forEach(chudcat => {
+                const chudli = document.createElement('li');
+                const chuda = document.createElement('a');
+                chuda.href = '#';
+                chuda.textContent = chudcat.name;
+                chuda.onclick = (e) => {
+                    e.preventDefault();
+                    grimace(chudcat.name);
+                };
+                chudli.appendChild(chuda);
+                navrizz.appendChild(chudli);
+            });
+
+            soy.links.forEach(chudlink => {
+                const chudli = document.createElement('li');
+                const chuda = document.createElement('a');
+                chuda.href = chudlink.url;
+                chuda.target = '_blank';
+                chuda.textContent = chudlink.name;
+                chudli.appendChild(chuda);
+                navrizz.appendChild(chudli);
+            });
+        }
+
+        function grimace(chudname) {
+            const chudelement = document.getElementById('cat-' + chudname.replace(/\s+/g, '-'));
+            if (chudelement) {
+                chudelement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function ohio(filter = '') {
+            const bludbox = document.getElementById('listgoon');
+            bludbox.innerHTML = '';
+
+            soy.categories.forEach(chudcat => {
+                const filteredblud = filter
+                    ? chudcat.items.filter(chuditem =>
+                        chuditem.name.toLowerCase().includes(filter.toLowerCase()) ||
+                        chuditem.desc.toLowerCase().includes(filter.toLowerCase())
+                    )
+                    : chudcat.items;
+
+                if (filteredblud.length === 0 && filter) return;
+
+                const catblud = document.createElement('div');
+                catblud.className = 'blud';
+                catblud.id = 'cat-' + chudcat.name.replace(/\s+/g, '-');
+
+                const titleblud = document.createElement('div');
+                titleblud.className = 'yapping';
+                titleblud.textContent = chudcat.name;
+
+                const itemsblud = document.createElement('div');
+                itemsblud.className = 'cooked';
+
+                filteredblud.forEach(chuditem => {
+                    const itemblud = document.createElement('div');
+                    itemblud.className = 'skibidi';
+                    itemblud.onclick = () => mog(chuditem);
+
+                    const infoblud = document.createElement('div');
+                    infoblud.className = 'huzz';
+
+                    const nameblud = document.createElement('div');
+                    nameblud.className = 'unc';
+                    nameblud.textContent = chuditem.name;
+
+                    const descblud = document.createElement('div');
+                    descblud.className = 'capybara';
+                    descblud.textContent = chuditem.desc;
+
+                    infoblud.appendChild(nameblud);
+                    infoblud.appendChild(descblud);
+
+                    const pathblud = document.createElement('div');
+                    pathblud.className = 'grimace';
+                    pathblud.textContent = chuditem.path;
+
+                    itemblud.appendChild(infoblud);
+                    itemblud.appendChild(pathblud);
+                    itemsblud.appendChild(itemblud);
+                });
+
+                catblud.appendChild(titleblud);
+                catblud.appendChild(itemsblud);
+                bludbox.appendChild(catblud);
+            });
+
+            if (bludbox.children.length === 0) {
+                const chudempty = document.createElement('p');
+                chudempty.style.textAlign = 'center';
+                chudempty.style.color = '#999';
+                chudempty.style.padding = '30px';
+                chudempty.textContent = 'no results found.';
+                bludbox.appendChild(chudempty);
+            }
+        }
+
+        function rizz() {
+            const griddblud = document.getElementById('gridgoon');
+            griddblud.innerHTML = '';
+
+            soy.links.forEach(chudlink => {
+                const chuda = document.createElement('a');
+                chuda.className = 'muntz';
+                chuda.href = chudlink.url;
+                chuda.target = '_blank';
+                chuda.textContent = chudlink.name;
+                griddblud.appendChild(chuda);
+            });
+        }
+
+        function sigma() {
+            const goonbox = document.getElementById('searchgoon');
+            goonbox.addEventListener('input', (e) => {
+                ohio(e.target.value);
+            });
+        }
+
+        let polyester = '';
+
+        function mog(chuditem) {
+            polyester = chuditem;
+            document.getElementById('titlegoon').textContent = chuditem.name;
+            document.getElementById('urlgoon').textContent = soy.whatsappworker.baseurl + chuditem.path;
+            document.getElementById('inputgoon').value = '';
+            document.getElementById('resultgoon').style.display = 'none';
+            document.getElementById('overlaygoon').classList.add('active');
+        }
+
+        function unmog() {
+            document.getElementById('overlaygoon').classList.remove('active');
+        }
+
+        function capy() {
+            const gooncopy = document.getElementById('urlgoon').textContent;
+            navigator.clipboard.writeText(gooncopy).then(() => {
+                const goonbtn = document.querySelector('.copium');
+                goonbtn.textContent = 'copied!';
+                setTimeout(() => goonbtn.textContent = 'copy url', 1500);
+            });
+        }
+
+        function yaptest() {
+            const goonparam = document.getElementById('inputgoon').value;
+            const goonresult = document.getElementById('resultgoon');
+
+            if (!goonparam) {
+                alert('please enter a value for the parameter');
+                return;
+            }
+
+            const goonurl = soy.whatsappworker.baseurl + polyester.path + encodeURIComponent(goonparam);
+
+            goonresult.style.display = 'block';
+            goonresult.textContent = 'loading...';
+
+            fetch(goonurl)
+                .then(chudres => chudres.json())
+                .then(chuddata => {
+                    goonresult.textContent = JSON.stringify(chuddata, null, 2);
+                })
+                .catch(chuderr => {
+                    goonresult.textContent = 'error: ' + chuderr.message;
+                });
+        }
+
+        document.getElementById('overlaygoon').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('overlaygoon')) {
+                unmog();
+            }
+        });
+
+        goon();
+    </script>
+</body>
+</html>
