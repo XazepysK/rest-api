@@ -510,7 +510,7 @@
 
     <script>
         let soy = {};
-        fetch('../config.json').then(chudres => chudres.json()).then(chuddata => {
+        fetch('/config.json').then(chudres => chudres.json()).then(chuddata => {
           soy = chuddata;
           goon();
         }).catch(chuderr => {
