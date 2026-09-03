@@ -1,0 +1,54 @@
+{
+  "name": "statix-api's",
+  "description": "a simple application programming interface ( api ) for integration between applications or systems to communicate and exchange data",
+  "header": {
+    "status": "online",
+    "imagesrc": [
+      "https://files.catbox.moe/v7h9s9.gif"
+    ],
+    "imagesize": {
+      "mobile": "80%",
+      "tablet": "40%",
+      "desktop": "40%"
+    }
+  },
+  "apisettings": {
+    "creator": "xazepysk"
+  },
+  "links": [
+    {
+      "name": "my github",
+      "url": "https://github.com/XazepysK"
+    },
+    {
+      "name": "donate",
+      "url": "https://www.zeppeli.my.id"
+    },
+    {
+      "name": "my tg",
+      "url": "https://t.me/ZanLugner"
+    }
+  ],
+  "categories": [
+    {
+      "name": "artificial intelligence",
+      "items": [
+        {
+          "name": "depp ai",
+          "desc": "Y",
+          "path": "/ai/deep?text="
+        }
+      ]
+    },
+    {
+      "name": "random image",
+      "items": [
+        {
+          "name": "blue archive",
+          "desc": "Y",
+          "path": "/random/ba"
+        }
+      ]
+    }
+  ]
+}
