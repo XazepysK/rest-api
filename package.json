@@ -1,0 +1,18 @@
+{
+  "name": "sx-api",
+  "version": "lts",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "XazepysK",
+  "licence": "MIT",
+  "keywords": [
+    "XazepysK",
+    "rest api",
+    "api base",
+    "nodejs"
+  ],
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
