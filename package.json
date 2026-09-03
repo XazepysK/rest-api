@@ -13,6 +13,9 @@
     "nodejs"
   ],
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "axios": "^1.6.8",
+    "fs": "0.0.1-security",
+    "cors": "^2.8.5"
   }
 }
